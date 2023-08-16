@@ -427,7 +427,7 @@ img {
 
 .customer-link:focus {
     border-color: #404bbf;
-    background-color: #404bbf;
+    color: #404bbf;
     fill: #404bbf;
 }
 
