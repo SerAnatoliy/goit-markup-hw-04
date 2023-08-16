@@ -10,6 +10,13 @@
 
 
 /********************************Default styles*********************************/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: "Roboto", sans-serif;
     color: var(--main-text-black);
@@ -25,8 +32,11 @@ img {
 }
 
 .list {
-    margin: 0;
-    padding-left: 0;
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
 }
 
 h1,
@@ -39,18 +49,29 @@ p {
     margin: 0;
 }
 
-.container {
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
+input,
+textarea,
+button {
+    font: inherit;
 }
 
-.link {
+button {
+    cursor: pointer;
+    color: currentColor;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
     text-decoration: none;
 }
 
-.list {
-    list-style: none;
+img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .visually-hidden {
@@ -65,6 +86,14 @@ p {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
 
 /**************************HEADER ************************/
 
@@ -393,6 +422,7 @@ p {
 .customer-link:focus {
     border-color: #404bbf;
     color: #404bbf;
+    fill: #404bbf;
 }
 
 .customer-logo {
@@ -423,7 +453,8 @@ p {
     align-items: baseline;
 }
 
-.logo-pragraph-container {
+.logo-paragraph-container {
+    width: 264px;
     margin-right: 120px;
 }
 
@@ -434,8 +465,8 @@ p {
     font-weight: 800;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-right: 76px;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .logo-second-word-footer {
@@ -444,7 +475,10 @@ p {
 
 .text-footer {
     max-width: 264px;
-    color: var(--main-white-color)
+    color: var(--main-white-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .footer-social-media-text {
@@ -458,6 +492,8 @@ p {
 
 .footer-social-media-list {
     display: flex;
+    align-items: center;
+    justify-content: start;
     gap: 16px;
 
 }
@@ -465,7 +501,6 @@ p {
 .footer-social-media-item {
     width: 40px;
     height: 40px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .footer-social-media-link {
@@ -505,7 +540,6 @@ p {
 .filters-list {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 24px;
     margin-bottom: 72px;
 }
@@ -550,6 +584,7 @@ p {
     row-gap: 48px;
     padding: 0;
     margin: 0;
+
 }
 
 .service-item {
@@ -581,6 +616,7 @@ p {
 }
 
 .service-list-overlay {
+
     position: relative;
     overflow: hidden;
 }
@@ -606,6 +642,23 @@ p {
     border-top: none;
     padding: 32px 16px;
 
+}
+
+.service-item-title {
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+}
+
+.service-item-text {
+    color: var(--main-text-black);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
 }
 
 
