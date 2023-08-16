@@ -577,7 +577,7 @@ img {
     background: var(--accent-color);
 }
 
-.service-list {
+.services-list {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
